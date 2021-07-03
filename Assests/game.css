@@ -18,9 +18,20 @@
 
 .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 black;
+    transform: scale(1.1);
+    transition: transform 100ms;
+}
+
+#highscores {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#highscores:hover {
+    cursor: pointer;
     transform: scale(1.02);
     transition: transform 100ms;
+    text-shadow: 0 0.4rem 1.4rem 0 black;;
 }
 
 .choice-prefix {
@@ -47,20 +58,6 @@
     text-align: center;
 }
 
-#progessBar {
-    width: 20rem;
-    height: 3rem;
-    border: 0.2rem solid lime;
-    margin-top: 2rem;
-    border-radius: 50px;
-    overflow: hidden;
-}
-
-#progressBarFull {
-    height: 100%;
-    background: lime;
-    width: 0%;
-}
 
 @media screen and (max-width: 768px) {
     .choice-container{
