@@ -58,7 +58,9 @@
     text-align: center;
 }
 
-
+.btn {
+    display: none;
+}
 @media screen and (max-width: 768px) {
     .choice-container{
         min-width: 40rem;

@@ -11,9 +11,13 @@
 <body>
     <div class="container">
         <div id="home" class="flex-column flex-center">
-            <h1>Are you Ready?</h1>
-            <p>Test your knowledge with this JavaScript Quiz!</p>
-            <a href="./game.html" class="btn">Play</a>
+            <h1>Results</h1>
+            <p>Enter you Initials</p>
+            <form id= "form" action="/action_page.php">
+                <label for="initials">Initials</label>
+                <input type="text" id="initials" name="initials" value=""><br>
+            </form>
+            <a href="./highscores.html" class="btn">Submit</a>
             <a href="./highscores.html" id="highscores-btn" class="btn">High Scores</a>
         </div>
     </div>
