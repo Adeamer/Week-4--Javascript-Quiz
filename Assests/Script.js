@@ -14,7 +14,7 @@ let availableQuestions = {}
 
 //inputting questions inside the the question div in game.html//
 
-let questions = [
+ let questions = [
     {
         question: "What is 1 + 1?",
         choice1: "2",
@@ -64,10 +64,6 @@ getNewQuestions = () => {
 
         retur window.location.assign("/end.html")
     }
-
-    questionCounter++
-    progressText.innerText = "Question ${questionCounter} of ${MAX_QUESTIONS}"
-    progressBarFull.style.width = "${(questionCounter/MAX_QUESTIONS) * 100}%"
 
     var questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestions = availableQuestions [questionsIndex]
