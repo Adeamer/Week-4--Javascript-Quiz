@@ -39,8 +39,8 @@
 }
 
 .choice-text {
+    font-size: medium;
     padding: 2rem;
-    width: 100%;
 }
 
 /* Heads up display */

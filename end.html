@@ -3,24 +3,32 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./Assests/Style.css">
+    <link rel="stylesheet" href="./Assests/CS/Style.css">
     <title>Javascript Quiz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="Results">
         <div id="home" class="flex-column flex-center">
             <h1>Results</h1>
             <p>Enter you Initials</p>
             <form id= "form" action="/action_page.php">
                 <label for="initials">Initials</label>
-                <input type="text" id="initials" name="initials" value=""><br>
+                <input type="text" id="initials" name="initials" value="Initials" onkeyup="manage(this)"><br>
             </form>
-            <a href="./highscores.html" class="btn">Submit</a>
-            <a href="./highscores.html" id="highscores-btn" class="btn">High Scores</a>
+            <button class="btn" id="submitbtn" disabled="disabled">Submit</button>
+            <button class="btn" id="HSbtn">Highscores</button>
+        </div>
+    </div>
+    <div class="container hidden" id="highscores">
+        <div id="home" class="flex-column flex-center">
+            <h1>Highscores</h1>
+            <div id="highscores-tally"></div>
+            <a href="./Index.html" class="btn">Main Menu</a>
         </div>
     </div>
 
+<script src="./Assests/JS/end.js"></script>
 
 </body>
