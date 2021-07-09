@@ -6,7 +6,7 @@ var timer = document.querySelector("#countdown");
 
 
 window.localStorage.setItem("Initial", initials);
-window.localStorage.setItem("Time Stamp", timer);
+window.localStorage.setItem("Time Stamp", JSON.stringify());
 
 // When either the submit or highscore button is pressed on the end.html the input screen will change to the highscore screen.
 submitbtn.onclick = function(){
@@ -21,11 +21,11 @@ HSbtn.onclick = function(){
     document.getElementById("Results").classList.add("hidden");
 };  
 
-(function manage(initials) {
+function manage() {
    if (initials.value != " "){
         submitbtn.disabled = false;
    }
    else {
         submitbtn.disabled = true;
    }
-})
+}
