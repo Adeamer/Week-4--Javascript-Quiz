@@ -3,22 +3,22 @@ var submitbtn = document.querySelector("#submitbtn");
 var highscores = document.querySelector("#highscores");
 var HSbtn = document.querySelector("#HSbtn");
 var timer = document.querySelector("#countdown");
-
 var initialsvalue = initials.value.trim();
-//var timersvalue = timer.value.trim();
-console.log(initials);
 
 
-window.localStorage.setItem("Initial", initials);
-window.localStorage.setItem("Time Stamp", timer);
+
+
+
 
 
 
 // When either the submit or highscore button is pressed on the end.html the input screen will change to the highscore screen.
 submitbtn.onclick = function(){
-    console.log(submitbtn)
+    
     highscores.classList.remove("hidden");
     document.getElementById("Results").classList.add("hidden");
+    localStorage.setItem("Initial", JSON.stringify(initialsvalue));
+    console.log(initialsvalue);
 };
 
 HSbtn.onclick = function(){

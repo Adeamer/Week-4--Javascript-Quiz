@@ -4,6 +4,7 @@ var question = document.querySelector("#question");
 var choices = document.querySelectorAll(".choice-text");
 var choicebtns = document.querySelectorAll(".choice-container");
 var highscores = document.querySelector("#highscores");
+var timer = document.querySelector("#countdown");
 
 
 
@@ -62,8 +63,10 @@ function startgame () {
 
 function getNewQuestions(questionsIndex) {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-
+        document.querySelector("#countdown");
+        localStorage.setItem("Time Stamp", timer.textContent);
         return window.location.assign("./end.html")
+        
     }
 
     currentQuestions = availableQuestions[questionsIndex]
@@ -100,7 +103,7 @@ var downloadTimer = setInterval(function(){
     }
     else
     {
-        window.localStorage.setItem("Time Stamp", timer);
+        
     }
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
