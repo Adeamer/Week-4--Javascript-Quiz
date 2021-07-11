@@ -12,6 +12,11 @@ submitbtn.onclick = function(e){
     localStorage.setItem("Initial", JSON.stringify(initialsvalue));
     highscores.classList.remove("hidden");
     document.getElementById("Results").classList.add("hidden");
+    var tally = localStorage.getItem("Initial");
+    document.getElementById("highscores-tally").innerHTML  = tally;
+    var tally = localStorage.getItem("Time Stamp");
+    document.getElementById("highscores-tally").innerHTML  = tally;
+    console.log(tally);
 };
 
 HSbtn.onclick = function(){
@@ -21,7 +26,10 @@ HSbtn.onclick = function(){
 };  
 
 var finalScore = localStorage.getItem("Time Stamp");
-document.getElementById("score").value = finalScore;
+document.getElementById("score").innerHTML  = finalScore;
+
+
+
 
 function manage() {
    if (initials.value != " "){
