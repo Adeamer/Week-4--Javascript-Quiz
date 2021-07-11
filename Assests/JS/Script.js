@@ -100,7 +100,7 @@ var downloadTimer = setInterval(function(){
     }
     else
     {
-        die();
+        window.localStorage.setItem("Time Stamp", timer);
     }
   } else {
     document.getElementById("countdown").innerHTML = timeleft;
